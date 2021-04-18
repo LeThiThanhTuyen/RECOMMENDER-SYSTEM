@@ -67,25 +67,25 @@ Phương pháp lọc cộng tác có các vấn đề như:
 <p align="justify"> &nbsp;&nbsp;&nbsp;&nbsp;Trong các bài báo, 5000 chứa analytics, 50.000 chứa data và số lượng tương tự dành cho các từ khác. Chúng ta hãy giả sử rằng tổng số tài liệu là 1 triệu (10 ^ 6).
 <p align="justify"> &nbsp;&nbsp;&nbsp;&nbsp;•	Tính TF: Ta sẽ tính TF cho mỗi từ trong mỗi bài báoVí dụ, TF(analytics) = 1 + lg21 = 2.322
 	
-<p align="center"> <https://user-images.githubusercontent.com/77925421/115143848-d29b2c00-a073-11eb-9492-dbb868e4186c.png" width="50%"/>
+<p align="center"> <img src ="https://user-images.githubusercontent.com/77925421/115143848-d29b2c00-a073-11eb-9492-dbb868e4186c.png" width="50%"/>
   
 <p align="justify"> &nbsp;&nbsp;&nbsp;&nbsp;•	Tính IDF:
 	
 <p align="justify"> &nbsp;&nbsp;&nbsp;&nbsp;IDF được tính bằng cách lấy nghịch đảo logarit của tần số tài liệu trong toàn bộ kho tài liệu. Vì vậy, nếu có tổng số 1 triệu tài liệu được trả về bởi truy vấn tìm kiếm của chúng tôi và trong số các tài liệu đó, ví dụ: nếu từ smart xuất hiện trong 0,5 triệu lần trong tài liệu, giá trị IDF của nó sẽ là: Log10 (10 ^ 6/5000000) = 0,30.(thiếu)
-<p align="center"> <https://user-images.githubusercontent.com/77925421/115143850-d464ef80-a073-11eb-9fc2-9ad3ee38164d.jpg" width="50%"/>
+<p align="center"> <img src ="https://user-images.githubusercontent.com/77925421/115143850-d464ef80-a073-11eb-9fc2-9ad3ee38164d.jpg" width="50%"/>
   
 <p align="justify"> &nbsp;&nbsp;&nbsp;&nbsp;•	Tính trọng số TF-IDF:
 <p align="justify"> &nbsp;&nbsp;&nbsp;&nbsp;Đầu tiên chúng ta sử dụng công thức sau để tính tf-df:
-<p align="center"> <https://user-images.githubusercontent.com/77925421/115143853-d8910d00-a073-11eb-957e-048f66debcec.jpg" width="50%"/>
+<p align="center"> <img src ="https://user-images.githubusercontent.com/77925421/115143853-d8910d00-a073-11eb-957e-048f66debcec.jpg" width="50%"/>
   
 <p align="justify"> &nbsp;&nbsp;&nbsp;&nbsp;Sau đó, chuẩn hóa feature vector bằng cách chia vector cho độ dài của chính nó.
-<p align="center"> <https://user-images.githubusercontent.com/77925421/115143858-ddee5780-a073-11eb-9089-3cce313e6be7.jpg" width="50%"/>
+<p align="center"> <img src ="https://user-images.githubusercontent.com/77925421/115143858-ddee5780-a073-11eb-9089-3cce313e6be7.jpg" width="50%"/>
   
 <p align="justify"> &nbsp;&nbsp;&nbsp;&nbsp;Như vậy, ta có thể có được các vector đặc trưng cho từng bài báo. Sau đó chúng ta có thể sử dụng độ tương đồng cosin để tính khoảng cách giữa chúng.
 #### Sử dụng biểu diễn nhị phân: 
   
 <p align="justify"> &nbsp;&nbsp;&nbsp;&nbsp;Sử dụng biểu diễn nhị phân:
-<p align="center"> <https://user-images.githubusercontent.com/77925421/115143860-de86ee00-a073-11eb-8297-d28b63379357.png" width="50%"/>
+<p align="center"> <img src ="https://user-images.githubusercontent.com/77925421/115143860-de86ee00-a073-11eb-8297-d28b63379357.png" width="50%"/>
   
 <p align="justify"> &nbsp;&nbsp;&nbsp;&nbsp;Trên đây là danh sách 6 bộ phim. Mỗi giá trị 0/1 thể hiện bộ phim đó không/có thuộc thể loại ở cột tương ứng.
 <p align="justify"> &nbsp;&nbsp;&nbsp;&nbsp;Bên cạnh đó, một hồ sơ người dùng cũng được tạo ra, với 1 là quan tâm, -1 là không, và null là chưa đánh giá. Như trong ví dụ trên, User 1 có quan tâm bộ phim Star Wars IV, còn User 2 thì không.
@@ -102,37 +102,37 @@ Phương pháp lọc cộng tác có các vấn đề như:
 <p align="justify"> &nbsp;&nbsp;&nbsp;&nbsp;Áp dụng mô hình tuyến tính:
 
 <p align="justify"> &nbsp;&nbsp;&nbsp;&nbsp;Giả sử rằng ta có thể tìm được một mô hình có thể tính được mức độ quan tâm của mỗi user với mỗi item bằng một hàm tuyến tính:
-<p align="center"> <https://user-images.githubusercontent.com/77925421/115143862-df1f8480-a073-11eb-900f-63d2e782b0f4.png" width="50%"/>
+<p align="center"> <img src ="https://user-images.githubusercontent.com/77925421/115143862-df1f8480-a073-11eb-900f-63d2e782b0f4.png" width="50%"/>
   
 <p align="justify"> &nbsp;&nbsp;&nbsp;&nbsp;Trong đó, x(m) là vector đặc trưng của item m.
 <p align="justify"> &nbsp;&nbsp;&nbsp;&nbsp;Mục tiêu của chúng ta sẽ là học ra mô hình của user, tức là tìm ra w(n) và b(n).
 <p align="justify"> &nbsp;&nbsp;&nbsp;&nbsp;Xét một user thứ n bất kỳ, nếu ta coi training set là tập hợp các thành phần đã được điền của yn, ta có thể xây dựng hàm mất mát tương tự như sau:
 
-<p align="center"> <https://user-images.githubusercontent.com/77925421/115143863-dfb81b00-a073-11eb-9788-a988378ce763.png" width="50%"/>
+<p align="center"> <img src ="https://user-images.githubusercontent.com/77925421/115143863-dfb81b00-a073-11eb-9788-a988378ce763.png" width="50%"/>
   
 <p align="justify"> &nbsp;&nbsp;&nbsp;&nbsp;Trong đó, thành phần thứ hai là regularization term và λ là một tham số dương. Chú ý rằng regularization thường không được áp dụng lên bn. Trong thực hành, trung bình cộng của lỗi thường được dùng, và mất mát nên Ln được viết lại thành:
-<p align="center"> <https://user-images.githubusercontent.com/77925421/115143862-df1f8480-a073-11eb-900f-63d2e782b0f4.png" width="50%"/>
+<p align="center"> <img src ="https://user-images.githubusercontent.com/77925421/115143862-df1f8480-a073-11eb-900f-63d2e782b0f4.png" width="50%"/>
   
 <p align="justify"> &nbsp;&nbsp;&nbsp;&nbsp;Trong đó sn là số lượng các items mà user thứ n đã rated. Nói cách khác, sn là tổng các phần tử trên cột thứ n của ma trận rated or not R:
   
-<p align="center"> <https://user-images.githubusercontent.com/77925421/115143866-e0e94800-a073-11eb-874c-1d4e46298864.png" width="50%"/>
+<p align="center"> <img src ="https://user-images.githubusercontent.com/77925421/115143866-e0e94800-a073-11eb-874c-1d4e46298864.png" width="50%"/>
   
 <p align="justify"> &nbsp;&nbsp;&nbsp;&nbsp;Vì hàm mục tiêu chỉ phụ thuộc vào các items đã được rated, ta có thể rút gọn nó bằng cách đặt ^yn là sub vector của y được xây dựng bằng cách trích các thành phần khác dấu? ở cột thứ n, tức đã được rated bởi user thứ n trong ma trận Y. Đồng thời, đặt X^n là submatrix của ma trận feature X, được tạo bằng cách trích các hàng tương ứng với các items đã được rated bởi user thứ n. Khi đó, biểu thức hàm mất mát của mô hình cho user thứ n được viết gọn thành công thức (*):
-<p align="center"> <https://user-images.githubusercontent.com/77925421/115143867-e181de80-a073-11eb-9ace-29317307f911.png" width="50%"/>
+<p align="center"> <img src ="https://user-images.githubusercontent.com/77925421/115143867-e181de80-a073-11eb-9ace-29317307f911.png" width="50%"/>
   
 <p align="justify"> &nbsp;&nbsp;&nbsp;&nbsp;Đây chính là bài toán Ridge Regression, đã có sẵn trong thư viện “sklearn.linear_model.Ridge” của sklearn. Ở bài tiếp theo, chúng ta sẽ sử dụng thư viện này để tìm w(n) và b(n) cho mỗi user. Còn bây giờ chúng ta sẽ xét một ví dụ về cách xây dựng mô hình cho mỗi user.
 <p align="justify"> &nbsp;&nbsp;&nbsp;&nbsp;Ví dụ:
 <p align="justify"> &nbsp;&nbsp;&nbsp;&nbsp;Xét bài toán: Ta có 5 items, vector đặc trưng của mỗi item được biểu diễn bởi một hàng:
-<p align="center"> <https://user-images.githubusercontent.com/77925421/115143871-e2b30b80-a073-11eb-91da-289621f5d888.png" width="50%"/>
+<p align="center"> <img src ="https://user-images.githubusercontent.com/77925421/115143871-e2b30b80-a073-11eb-91da-289621f5d888.png" width="50%"/>
   
 <p align="justify"> &nbsp;&nbsp;&nbsp;&nbsp;Đồng thời, chúng ta có thông tin về user 5, đã đánh giá các item 1 và 4:  
-<p align="center"> <https://user-images.githubusercontent.com/77925421/115143872-e34ba200-a073-11eb-8ad7-b76aa4823eaf.png" width="50%"/>
+<p align="center"> <img src ="https://user-images.githubusercontent.com/77925421/115143872-e34ba200-a073-11eb-8ad7-b76aa4823eaf.png" width="50%"/>
   
 <p align="justify"> &nbsp;&nbsp;&nbsp;&nbsp;Đầu tiên, tiền xử lý để thu được sub vector:
-<p align="center"> <https://user-images.githubusercontent.com/77925421/115143891-ed6da080-a073-11eb-8b4f-abfc0f57cefc.png" width="50%"/>
+<p align="center"> <img src ="https://user-images.githubusercontent.com/77925421/115143891-ed6da080-a073-11eb-8b4f-abfc0f57cefc.png" width="50%"/>
   
 <p align="justify"> &nbsp;&nbsp;&nbsp;&nbsp;Sau đó áp dụng công thức (*), ta sẽ được hàm mất mát:
-<p align="center"> <https://user-images.githubusercontent.com/77925421/115143893-ee9ecd80-a073-11eb-9616-405680b5b4c1.png" width="50%"/>
+<p align="center"> <img src ="https://user-images.githubusercontent.com/77925421/115143893-ee9ecd80-a073-11eb-9616-405680b5b4c1.png" width="50%"/>
   
 <p align="justify"> &nbsp;&nbsp;&nbsp;&nbsp;Cuối cùng, chúng ta có thể sử dụng Stochastic Gradient Descent (SGD), hoặc Mini-batch GD để tìm ra w(5) và b(5).
   
