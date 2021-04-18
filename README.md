@@ -20,11 +20,18 @@ Phương pháp lọc cộng tác có các vấn đề như:
   
   
 ## CHƯƠNG 2: CÁC THÀNH PHẦN CỦA MỘT HỆ GỢI Ý
-
+<p align="justify"> &nbsp;&nbsp;&nbsp;&nbsp;Hệ gợi ý rất quen thuộc và gần gũi, vậy để xây dựng được một hệ gợi ý, chúng ta cần có:
+    
 ### 1 Dữ liệu
+<p align="justify"> &nbsp;&nbsp;&nbsp;&nbsp;Đầu tiên chúng ta cần có dữ liệu về users, items, feedback
+<p align="justify"> &nbsp;&nbsp;&nbsp;&nbsp;Trong đó
+<p align="justify"> &nbsp;&nbsp;&nbsp;&nbsp;•	users là danh sách người dùng
+<p align="justify"> &nbsp;&nbsp;&nbsp;&nbsp;•	items là danh sách sản phẩm, đối tượng của hệ thống. Ví dụ như các bài viết trên trang viblo, các video trên youtube,… Và mỗi item có thể kèm theo thông tin mô tả.
+<p align="justify"> &nbsp;&nbsp;&nbsp;&nbsp;•	feedback là lịch sử tương tác của user với mỗi item, có thể là đánh giá của mỗi user với một item, số ratings, hoặc comment, việc user click, view hoặc mua sản phẩm,…
 
 ### 2 Ma trận user-item: Utility matrix
-
+<p align="center"> <img src ="https://user-images.githubusercontent.com/77925421/106374874-92ec6e80-63b9-11eb-92eb-405234070018.png" width="50%"/>
+  
 ### 3 Phương pháp 
 
 #### 3.1 Content-based Filtering: 
