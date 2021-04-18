@@ -137,3 +137,12 @@ Phương pháp lọc cộng tác có các vấn đề như:
 <p align="justify"> &nbsp;&nbsp;&nbsp;&nbsp;Cuối cùng, chúng ta có thể sử dụng Stochastic Gradient Descent (SGD), hoặc Mini-batch GD để tìm ra w(5) và b(5).
   
 ## TÀI LIỆU THAM KHẢO
+&nbsp;&nbsp;&nbsp;&nbsp;1.https://machinelearningcoban.com/2017/05/17/contentbasedrecommendersys/
+
+&nbsp;&nbsp;&nbsp;&nbsp;2.https://tailieu.vn/doc/luan-van-thac-si-ung-dung-he-thong-tu-van-recommender-systems-trong-linh-vuc-thuong-mai-dien-tu-1602259.html
+
+&nbsp;&nbsp;&nbsp;&nbsp;3.https://itzone.com.vn/vi/article/tim-hieu-ve-content-based-filtering-phuong-phap-goi-y-dua-theo-noi-dung-phan-1/
+
+&nbsp;&nbsp;&nbsp;&nbsp;4.https://l.facebook.com/l.php?u=https%3A%2F%2Fviblo.asia%2Fp%2Flam-the-nao-de-xay-dung-mot-recommender-system-rs-phan-1-aWj53V2Gl6m%3Ffbclid%3DIwAR2k-ePOFRDLOPSsG3iAHRqDCaQ6X_GzKpJW8vOi1hpCAiiomYfHD2JWtXg&h=AT19O0pxrq2c6csEXzJ5VnE5c8oIg1ohkBGYHTgkg5ytrg1u3orKqBq3TB5u_3f5m7Kc_L4in4vGm-8Iuy8BMcoaXNdXLsBoJ49KhNTKRw9VCv8JGeZKHCBndCAaMYoMXH_-GA
+
+
