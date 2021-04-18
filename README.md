@@ -111,7 +111,7 @@ Phương pháp lọc cộng tác có các vấn đề như:
 <p align="center"> <img src ="https://user-images.githubusercontent.com/77925421/115143863-dfb81b00-a073-11eb-9788-a988378ce763.png" width="50%"/>
   
 <p align="justify"> &nbsp;&nbsp;&nbsp;&nbsp;Trong đó, thành phần thứ hai là regularization term và λ là một tham số dương. Chú ý rằng regularization thường không được áp dụng lên bn. Trong thực hành, trung bình cộng của lỗi thường được dùng, và mất mát nên Ln được viết lại thành:
-<p align="center"> <img src ="https://user-images.githubusercontent.com/77925421/115143862-df1f8480-a073-11eb-900f-63d2e782b0f4.png" width="50%"/>
+<p align="center"> <img src ="https://user-images.githubusercontent.com/77925421/115143865-e050b180-a073-11eb-8c45-9352cbb370f6.png" width="50%"/>
   
 <p align="justify"> &nbsp;&nbsp;&nbsp;&nbsp;Trong đó sn là số lượng các items mà user thứ n đã rated. Nói cách khác, sn là tổng các phần tử trên cột thứ n của ma trận rated or not R:
   
