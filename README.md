@@ -61,9 +61,12 @@ Phương pháp lọc cộng tác có các vấn đề như:
 <p align="justify"> &nbsp;&nbsp;&nbsp;&nbsp;TF(t, d) = ( số lần từ t xuất hiện trong văn bản d) / (tổng số từ trong văn bản d)
 <p align="justify"> &nbsp;&nbsp;&nbsp;&nbsp;IDF(t, D) = log_e( Tổng số văn bản trong tập mẫu D/ Số văn bản có chứa từ t )
 <p align="justify"> &nbsp;&nbsp;&nbsp;&nbsp;Ví dụ: Giả sử chúng ta tìm kiếm về “IoT and analytics” trên Internet và tìm được những bài báo dưới đây:
+	
 <p align="center"> <img src ="https://user-images.githubusercontent.com/77925421/115143846-d169ff00-a073-11eb-8a7c-a1e1052ef6f2.png" width="50%"/>
+	
 <p align="justify"> &nbsp;&nbsp;&nbsp;&nbsp;Trong các bài báo, 5000 chứa analytics, 50.000 chứa data và số lượng tương tự dành cho các từ khác. Chúng ta hãy giả sử rằng tổng số tài liệu là 1 triệu (10 ^ 6).
 <p align="justify"> &nbsp;&nbsp;&nbsp;&nbsp;•	Tính TF: Ta sẽ tính TF cho mỗi từ trong mỗi bài báoVí dụ, TF(analytics) = 1 + lg21 = 2.322
+	
 <p align="center"> <https://user-images.githubusercontent.com/77925421/115143848-d29b2c00-a073-11eb-9492-dbb868e4186c.png" width="50%"/>
   
 <p align="justify"> &nbsp;&nbsp;&nbsp;&nbsp;•	Tính IDF:
