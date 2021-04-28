@@ -1,5 +1,32 @@
 # RECOMMENDER-SYSTEM
-## CHƯƠNG 1: GIỚI THIỆU VỀ RECOMMENDER SYSTEM
+## CHƯƠNG 1: BÀI TOÁN
+### 1 Bài toán, input, output
+#### Bài toán
+<p align="justify"> &nbsp;&nbsp;&nbsp;&nbsp; Hàng năm có vô vàn các bộ phim được phát hành, chính vì vậy mà khách hàng cũng có vô vàn sự lựa chọn khác nhau. Do đó để có thể thu hút được người xem cần có những công cụ đề xuất phim cho người xem.
+<p align="justify"> &nbsp;&nbsp;&nbsp;&nbsp; Giữa người xem và phim có sự phụ thuộc chặt chẽ với nhau, ví dụ: một người xem quan tâm đến một bộ phim tài liệu lịch sử có nhiều khả năng quan tâm đến một tài liệu lịch sử khác hoặc một chương trình giáo dục, thay vì trong một bộ phim hành động. Trong nhiều trường hợp, các danh mục phim khác nhau có thể hiển thị các mối tương quan đáng kể, có thể được tận dụng để tạo ra khuyến nghị chính xác hơn. Một hệ thống đề xuất phim quan trọng ở sức mạnh của nó trong việc cung cấp giải trí và trải nghiệm người dùng được cá nhân hóa. Như một hệ thống có thể đề xuất một bộ phim cho người dùng dựa trên sự quan tâm hoặc mức độ phổ biến của các bộ phim.
+<p align="justify"> &nbsp;&nbsp;&nbsp;&nbsp; Các công ty đang chi hàng triệu đô để xây dựng mô hình đề xuất chính xác vì đây là một mô hình được cá nhân hóa chiến dịch hướng đến khách hàng mục tiêu. Giải thưởng Netflix, một cuộc thi mở cho thuật toán lọc cộng tác tốt nhất để dự đoán người dùng xếp hạng cho phim, dựa trên xếp hạng trước đó mà không có bất kỳ thông tin nào khác về người dùng hoặc phim. Cuộc thi đã được tổ chức bởi Netflix vào năm 2006 và diễn ra trong gần 3 năm và giải thưởng lớn 1.000.000 đô la Mỹ đã được trao cho đội có thuật toán tốt nhất để dự đoán xếp hạng tăng 10,06%.
+<p align="justify"> &nbsp;&nbsp;&nbsp;&nbsp; Các hệ thống khuyến nghị được sử dụng rộng rãi nhất dựa trên Collaborative Filtering(CF) -  Lọc cộng tác và  Content-based Filtering - Lọc dựa trên nội dung. Lọc dựa trên nội dung thúc đẩy sự tương đồng giữa các bộ phim. Nó giả định rằng nếu người dùng thích một bộ phim thì anh ta cũng sẽ thích một bộ phim tương tự.
+	
+#### Input
+<p align="justify"> &nbsp;&nbsp;&nbsp;&nbsp; Tập dữ liệu MovieLens được thu thập bởi Grou- Dự án nghiên cứu pLens tại Đại học Minnesota. Tập dữ liệu này bao gồm:
+<p align="justify"> &nbsp;&nbsp;&nbsp;&nbsp;• 100.000 xếp hạng (1-5) từ 943 người dùng trên 1682 phim
+<p align="justify"> &nbsp;&nbsp;&nbsp;&nbsp;• Mỗi người dùng đã xếp hạng ít nhất 20 phim
+<p align="justify"> &nbsp;&nbsp;&nbsp;&nbsp;Dữ liệu được thu thập thông qua trang web MovieLens (phimmoi.umn.edu)
+	
+#### Output
+### Dữ liệu bài toán
+<p align="justify"> &nbsp;&nbsp;&nbsp;&nbsp;Dataset gồm 2 file: movies.csv và ratings.csv
+File movies.csv chứa những thông tin: mã phim (movieId), tên phim (title), thể loại phim (genres).
+<p align="center"> <img src ="https://user-images.githubusercontent.com/77925421/116339823-5093cb80-a808-11eb-83f6-26f905ab7ef6.png" width="50%"/>
+<p align="justify"> &nbsp;&nbsp;&nbsp;&nbsp; File ratings.csv chứa những thông tin: mã người đánh giá (userId), mã phim (movieId), điểm đánh giá (rating), thời gian đánh giá (timestamp).
+<p align="center"> <img src ="https://user-images.githubusercontent.com/77925421/116339976-95b7fd80-a808-11eb-9ff7-1b0c8a222408.png" width="50%"/>	
+<p align="center"> <img src ="https://user-images.githubusercontent.com/77925421/116340212-fd6e4880-a808-11eb-8c93-bcba1c3f269a.png" width="50%"/>
+<p align="center"> <img src ="https://user-images.githubusercontent.com/77925421/116340219-ffd0a280-a808-11eb-8453-e643736444d5.png" width="50%"/>
+<p align="center"> <img src ="https://user-images.githubusercontent.com/77925421/116340223-019a6600-a809-11eb-8471-a2ed27bff403.png" width="50%"/>
+<p align="center"> <img src ="https://user-images.githubusercontent.com/77925421/116340230-04955680-a809-11eb-8971-332f8d25a2c6.png" width="50%"/>
+<p align="center"> <img src ="https://user-images.githubusercontent.com/77925421/116340234-07904700-a809-11eb-99e3-bb73b48978b6.png" width="50%"/>
+
+## CHƯƠNG 2: GIỚI THIỆU VỀ RECOMMENDER SYSTEM
 ### 1 Giới thiệu hệ thống
 <p align="justify"> &nbsp;&nbsp;&nbsp;&nbsp; Hệ thống tư vấn (Recommender Systems) - là một thành phần trong hệ thống thông tin. Mục đích của nó là hỗ trợ người dùng tìm kiếm được đúng thông tin cần thiết.
   
@@ -10,16 +37,16 @@
   
 #### 2.2 Phương pháp lọc cộng tác (Collaboration filter)
 <p align="justify"> &nbsp;&nbsp;&nbsp;&nbsp;Phương pháp lọc cộng tác là phương pháp tập hợp các đánh giá hoặc các quan điểm của khách hàng, nhận dạng sự tương đồng giữa các khách hàng trên cơ sở các đánh giá hoặc quan điểm của họ và phát sinh ra những tư vấn mới cho khách hàng.
-Bản chất của phương pháp này chính là hình thức tư vấn truyền miệng tự động. Trong phương pháp này, hệ thống sẽ so sánh, tính toán độ tương tự nhau giữa những người dùng hay sản phẩm, từ đó người dùng sẽ được tư vấn những thông tin, sản phẩm được ưa chuộng nhất bởi những người dùng có cùng thị hiếu. Trong phương pháp này, hệ thống thường xây dựng các ma trận đánh giá bởi người dùng lên các sản phẩm, bản tin, từ đó tính toán độ tương tự giữa họ.
-Các hệ tư vấn dựa trên lọc cộng tác không yêu cầu quá nặng vào việc tính toán, do đó nó có thể đưa ra những tư vấn có độ chính xác cao và nhanh chóng cho một số lượng lớn người dùng. Hơn nữa, hệ tư vấn này không yêu cầu mô tả nội dung tưởng mình mà chỉ sử dụng đánh giá của người dùng để ước lượng, do đó những hệ này có khả năng tư vấn phong phú và thường tạo ra những tư vấn bất ngờ cho người dùng.
-Phương pháp lọc cộng tác có các vấn đề như:
-•	Sự thưa thớt
-•	Vấn đề sản phẩm mới
-•	Vấn đề khách hàng mới
+<p align="justify"> &nbsp;&nbsp;&nbsp;&nbsp;Bản chất của phương pháp này chính là hình thức tư vấn truyền miệng tự động. Trong phương pháp này, hệ thống sẽ so sánh, tính toán độ tương tự nhau giữa những người dùng hay sản phẩm, từ đó người dùng sẽ được tư vấn những thông tin, sản phẩm được ưa chuộng nhất bởi những người dùng có cùng thị hiếu. Trong phương pháp này, hệ thống thường xây dựng các ma trận đánh giá bởi người dùng lên các sản phẩm, bản tin, từ đó tính toán độ tương tự giữa họ.
+<p align="justify"> &nbsp;&nbsp;&nbsp;&nbsp;Các hệ tư vấn dựa trên lọc cộng tác không yêu cầu quá nặng vào việc tính toán, do đó nó có thể đưa ra những tư vấn có độ chính xác cao và nhanh chóng cho một số lượng lớn người dùng. Hơn nữa, hệ tư vấn này không yêu cầu mô tả nội dung tưởng mình mà chỉ sử dụng đánh giá của người dùng để ước lượng, do đó những hệ này có khả năng tư vấn phong phú và thường tạo ra những tư vấn bất ngờ cho người dùng.
+<p align="justify"> &nbsp;&nbsp;&nbsp;&nbsp;Phương pháp lọc cộng tác có các vấn đề như:
+<p align="justify"> &nbsp;&nbsp;&nbsp;&nbsp;•	Sự thưa thớt
+<p align="justify"> &nbsp;&nbsp;&nbsp;&nbsp;•	Vấn đề sản phẩm mới
+<p align="justify"> &nbsp;&nbsp;&nbsp;&nbsp;•	Vấn đề khách hàng mới
 
   
   
-## CHƯƠNG 2: CÁC THÀNH PHẦN CỦA MỘT HỆ GỢI Ý
+## CHƯƠNG 3: CÁC THÀNH PHẦN CỦA MỘT HỆ GỢI Ý
 <p align="justify"> &nbsp;&nbsp;&nbsp;&nbsp;Hệ gợi ý rất quen thuộc và gần gũi, vậy để xây dựng được một hệ gợi ý, chúng ta cần có:
     
 ### 1 Dữ liệu
@@ -44,7 +71,7 @@ Phương pháp lọc cộng tác có các vấn đề như:
 <p align="justify"> &nbsp;&nbsp;&nbsp;&nbsp;Gợi ý các items dựa trên sự tương quan (similarity) giữa các users và/hoặc items. Có thể hiểu rằng đây là cách gợi ý tới một user dựa trên những users có hành vi tương tự.
 <p align="center"> <img src ="https://user-images.githubusercontent.com/77925421/115143844-cfa03b80-a073-11eb-8f7a-5989b4f16ffb.png" width="50%"/>
 
-## CHƯƠNG 3: PHƯƠNG PHÁP GỢI Ý DỰA THEO NỘI DUNG (CONTENT-BASED FILTERING)
+## CHƯƠNG 4: PHƯƠNG PHÁP GỢI Ý DỰA THEO NỘI DUNG (CONTENT-BASED FILTERING)
 ### 1 Ý tưởng 
 <p align="justify"> &nbsp;&nbsp;&nbsp;&nbsp;Ý tưởng của thuật toán này là, từ thông tin mô tả của item, biểu diễn item dưới dạng vectơ thuộc tính. Sau đó dùng các vectơ này để học mô hình của mỗi user, là ma trận trọng số của user với mỗi item.
 <p align="justify"> &nbsp;&nbsp;&nbsp;&nbsp;Như vậy, thuật toán content-based gồm 2 bước:
@@ -135,7 +162,13 @@ Phương pháp lọc cộng tác có các vấn đề như:
 <p align="center"> <img src ="https://user-images.githubusercontent.com/77925421/115143893-ee9ecd80-a073-11eb-9616-405680b5b4c1.png" width="50%"/>
   
 <p align="justify"> &nbsp;&nbsp;&nbsp;&nbsp;Cuối cùng, chúng ta có thể sử dụng Stochastic Gradient Descent (SGD), hoặc Mini-batch GD để tìm ra w(5) và b(5).
-  
+
+## CHƯƠNG 5: CODE DEMO
+### Code Pyspark
+&nbsp;&nbsp;&nbsp;&nbsp;https://colab.research.google.com/drive/1wkWEL9ETvlWh2BQsPmGHcIcCq_uUdFuy?usp=sharing&fbclid=IwAR3PAb-x85Q628DtfTn8IPLCUcie9-Mr1sU-NxhYfWR0Fd6lKpVNtam_QB0
+
+### Code Tuần tự 
+&nbsp;&nbsp;&nbsp;&nbsp;https://colab.research.google.com/drive/1yd_wSb81Myhgu4cKq3vEjd7WQnHNYcPI?usp=sharing 
 ## TÀI LIỆU THAM KHẢO
 &nbsp;&nbsp;&nbsp;&nbsp;1.https://machinelearningcoban.com/2017/05/17/contentbasedrecommendersys/
 
@@ -144,5 +177,13 @@ Phương pháp lọc cộng tác có các vấn đề như:
 &nbsp;&nbsp;&nbsp;&nbsp;3.https://itzone.com.vn/vi/article/tim-hieu-ve-content-based-filtering-phuong-phap-goi-y-dua-theo-noi-dung-phan-1/
 
 &nbsp;&nbsp;&nbsp;&nbsp;4.https://l.facebook.com/l.php?u=https%3A%2F%2Fviblo.asia%2Fp%2Flam-the-nao-de-xay-dung-mot-recommender-system-rs-phan-1-aWj53V2Gl6m%3Ffbclid%3DIwAR2k-ePOFRDLOPSsG3iAHRqDCaQ6X_GzKpJW8vOi1hpCAiiomYfHD2JWtXg&h=AT19O0pxrq2c6csEXzJ5VnE5c8oIg1ohkBGYHTgkg5ytrg1u3orKqBq3TB5u_3f5m7Kc_L4in4vGm-8Iuy8BMcoaXNdXLsBoJ49KhNTKRw9VCv8JGeZKHCBndCAaMYoMXH_-GA
+
+### Code Pyspark:
+&nbsp;&nbsp;&nbsp;&nbsp;4.https://towardsdatascience.com/build-recommendation-system-with-pyspark-using-alternating-least-squares-als-matrix-factorisation-ebe1ad2e7679
+&nbsp;&nbsp;&nbsp;&nbsp;5.https://github.com/snehalnair/als-recommender-pyspark 
+### Code tuần tự:
+&nbsp;&nbsp;&nbsp;&nbsp;6.https://github.com/vivdalal/movie-recommender-system
+### Dataset:
+&nbsp;&nbsp;&nbsp;&nbsp;7.https://grouplens.org/datasets/movielens/100k/
 
 
