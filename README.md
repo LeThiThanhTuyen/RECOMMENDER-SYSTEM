@@ -179,11 +179,12 @@ File movies.csv chứa những thông tin: mã phim (movieId), tên phim (title)
 &nbsp;&nbsp;&nbsp;&nbsp;4.https://l.facebook.com/l.php?u=https%3A%2F%2Fviblo.asia%2Fp%2Flam-the-nao-de-xay-dung-mot-recommender-system-rs-phan-1-aWj53V2Gl6m%3Ffbclid%3DIwAR2k-ePOFRDLOPSsG3iAHRqDCaQ6X_GzKpJW8vOi1hpCAiiomYfHD2JWtXg&h=AT19O0pxrq2c6csEXzJ5VnE5c8oIg1ohkBGYHTgkg5ytrg1u3orKqBq3TB5u_3f5m7Kc_L4in4vGm-8Iuy8BMcoaXNdXLsBoJ49KhNTKRw9VCv8JGeZKHCBndCAaMYoMXH_-GA
 
 ### Code Pyspark:
-&nbsp;&nbsp;&nbsp;&nbsp;4.https://towardsdatascience.com/build-recommendation-system-with-pyspark-using-alternating-least-squares-als-matrix-factorisation-ebe1ad2e7679
-&nbsp;&nbsp;&nbsp;&nbsp;5.https://github.com/snehalnair/als-recommender-pyspark 
+&nbsp;&nbsp;&nbsp;&nbsp;5.https://towardsdatascience.com/build-recommendation-system-with-pyspark-using-alternating-least-squares-als-matrix-factorisation-ebe1ad2e7679
+
+&nbsp;&nbsp;&nbsp;&nbsp;6.https://github.com/snehalnair/als-recommender-pyspark 
 ### Code tuần tự:
-&nbsp;&nbsp;&nbsp;&nbsp;6.https://github.com/vivdalal/movie-recommender-system
+&nbsp;&nbsp;&nbsp;&nbsp;7.https://github.com/vivdalal/movie-recommender-system
 ### Dataset:
-&nbsp;&nbsp;&nbsp;&nbsp;7.https://grouplens.org/datasets/movielens/100k/
+&nbsp;&nbsp;&nbsp;&nbsp;8.https://grouplens.org/datasets/movielens/100k/
 
 
